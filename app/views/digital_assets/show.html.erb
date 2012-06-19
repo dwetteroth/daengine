@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @digital_asset.title %>
+</p>
+
+<p>
+  <b>Updated at:</b>
+  <%= @digital_asset.updated_at %>
+</p>
+
+<p>
+  <b>Audience:</b>
+  <%= @digital_asset.audiences %>
+</p>
+
+<p>
+  <b>Sami code:</b>
+  <%= @digital_asset.sami_code %>
+</p>
+
+<p>
+  <b>Program:</b>
+  <%= @digital_asset.product_ids %>
+</p>
+
+<p>
+  <b>Published at:</b>
+  <%= @digital_asset.published_at %>
+</p>
+
+<p>
+  <b>Expires at:</b>
+  <%= @digital_asset.expires_at %>
+</p>
+
+<p>
+  <b>Guid:</b>
+  <%= @digital_asset.guid %>
+</p>
+
+<% if @digital_asset.documents.size > 0 %>
+    <h2>Current Documents</h2>
+    <table>
+      <tr>
+        <th>Content Type</th>
+        <th>Path</th>
+      </tr>
+      <% for document in @digital_asset.documents %>
+          <tr>
+            <td><%= document.content_type %></td>
+            <td><%= document.path %></td>
+          </tr>
+      <% end %>
+    </table>
+<% end %>
+

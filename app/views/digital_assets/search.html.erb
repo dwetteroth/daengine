@@ -1,0 +1,46 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Sami code</th>
+    <th>Products</th>
+    <th>Updated at</th>
+    <th>Published at</th>
+    <th>Expires at</th>
+    <th>Guid</th>
+  </tr>
+
+  <% @digital_assets.each do |digital_asset| %>
+      <tr>
+        <td><%= digital_asset.title %></td>
+        <td><%= digital_asset.sami_code %></td>
+        <td><%= digital_asset.product_ids.join(", ") %></td>
+        <td><%= digital_asset.changed_at %></td>
+        <td><%= digital_asset.published_at %></td>
+        <td><%= digital_asset.expires_at %></td>
+        <td><%= digital_asset.guid %></td>
+        <td><%= link_to 'Show', digital_asset %></td>
+      </tr>
+  <% end %>
+</table>
+
+<div>
+  <h2>Current Documents</h2>
+  <% @digital_assets.each do |digital_asset| %>
+      <% if digital_asset.documents.size > 0 %>
+          <table>
+            <tr>
+              <th>Content Type</th>
+              <th>Path</th>
+            </tr>
+            <% for document in digital_asset.documents %>
+                <tr>
+                  <td><%= document.content_type %></td>
+                  <td><%= document.path %></td>
+                </tr>
+            <% end %>
+          </table>
+      <% end %>
+  <% end %>
+
+</div>
+

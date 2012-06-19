@@ -1,0 +1,4 @@
+host: localhost
+database: ssc_assets
+port: 27017
+assets_path: c:/dev/rails/sandbox/daengine_3/client/digital-assets

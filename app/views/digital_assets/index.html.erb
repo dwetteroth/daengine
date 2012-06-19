@@ -1,0 +1,34 @@
+<h1>Listing digital_assets</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Guid</th>
+    <th>Updated at</th>
+    <th>Audience</th>
+    <th>Sami code</th>
+    <th>Product</th>
+    <th>Published at</th>
+    <th>Expires at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+  <% @digital_assets.each do |digital_asset| %>
+      <tr>
+        <td><%= digital_asset.title %></td>
+        <td><%= digital_asset.guid %></td>
+        <td><%= digital_asset.changed_at %></td>
+        <td><%= digital_asset.audiences %></td>
+        <td><%= digital_asset.sami_code %></td>
+        <td><%= digital_asset.product_ids %></td>
+        <td><%= digital_asset.published_at %></td>
+        <td><%= digital_asset.expires_at %></td>
+        <td><%= link_to 'Show', digital_asset %></td>
+      </tr>
+  <% end %>
+</table>
+
+<br/>
+
