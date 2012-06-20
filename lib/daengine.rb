@@ -12,9 +12,9 @@ module Daengine
 
   @mongoid_config = {
     'database' => 'ssc_assets', # mongoid database name
-    'host' => 'foo', # mongoid server
-    'port' => 27017, # mongodb server port
-    'slave_ok' => true
+    'host' => nil, # mongoid server
+    'port' => nil, # mongodb server port
+    'hosts' => nil
   }
 
   @valid_mongoid_keys = @mongoid_config.keys

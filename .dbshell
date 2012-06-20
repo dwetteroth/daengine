@@ -3,3 +3,16 @@ use edist
 show collections
 db.digital_assets.find()
 db.digital_assets.count()
+show dbs
+show dbs
+use edist
+show collections
+show dbs
+use edist
+show collections
+db.digital_assets.count()
+show bs
+show dbs
+use edist
+show collections
+db.digital_assets.count()
