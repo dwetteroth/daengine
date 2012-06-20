@@ -48,3 +48,17 @@ database that the producer side writes to.  Client access is either directly thr
 the *DigitalAssets* model class, or via the engine-provided REST API 
 ie *http://localhost:3000/digital_assets.json*
 
+Querying for Digital Assets
+----------------------------
+
+Querying assets via the Model Class...
+
+    DigitalAsset.guid_is('/asdfasdflasdfalasdfasdfasdf.asfdasdf.foo')
+    DigitalAsset.path_is('/digitalAssets/some-crazy-guid.pdf')
+    DigitalAsset.sami_is('FOOBAR.001')
+
+Query via the REST API...
+
+    get 'http://localhost:3000/digital_assets/search?sami=FOOBAR.001'
+    get 'http://localhost:3000/digital_assets/search?funds=12345'
+
