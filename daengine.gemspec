@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.summary     = "Daengine GEM."
   s.description = "Daengine handles digital asset processing."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc", "Gemfile"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md", "Gemfile"]
   s.test_files = Dir.glob("spec/**/*")
 
   s.executables << 'process_assets'

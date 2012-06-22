@@ -1,3 +1,3 @@
 module Daengine
-  VERSION = "0.0.9.alpha"
+  VERSION = "0.1.2"
 end

@@ -25,6 +25,7 @@ module Daengine
     config_options.each {|k,v| 
       @mongoid_config[k] = v if @valid_mongoid_keys.include? k
     } 
+    @mongoid_config.delete_if { |k,v| ! v }
     Mongoid.configure do |config|
       config.from_hash(@mongoid_config)
     end
@@ -37,7 +38,7 @@ module Daengine
 
   def self.execute(config_options)
     self.configure(config_options)
-    return DigitalAssetProcessor.execute  # start the thread daemon
+    return DigitalAssetProcessor.process_tuple_directory  # start the thread daemon
   end
 
 end
